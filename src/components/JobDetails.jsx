@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ReactTimeAgo from "react-time-ago";
 import ReactHtmlParser from "react-html-parser";
 
 const PROXY_SERVER = "https://mysterious-plateau-89015.herokuapp.com/";
