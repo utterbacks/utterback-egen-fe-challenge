@@ -26,7 +26,6 @@ function JobDetails() {
 
 	return (
 		<div className="details-page">
-			<ReactTimeAgo date={job.created_at} locale="en-US" />
 			<div className="job-details-card">
 				<h1 className="job-details-title">{job.title}</h1>
 				<button>Apply Now</button>
