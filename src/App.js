@@ -24,13 +24,13 @@ function App() {
 							<div>devjobs</div>
 						</a>
 						<div onClick={toggleTheme}>
-							<i class="far fa-sun"></i>{" "}
+							<i class="far fa-moon"></i>{" "}
 							{theme === "light" ? (
 								<i class="fas fa-toggle-on "></i>
 							) : (
 								<i class="fas fa-toggle-off "></i>
 							)}{" "}
-							<i class="far fa-moon"></i>
+							<i class="far fa-sun"></i>
 						</div>
 					</header>
 
