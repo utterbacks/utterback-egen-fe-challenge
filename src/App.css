@@ -10,16 +10,20 @@
 	--lightBlue: #19212d;
 	/* box-shadow */
 	--level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+	/* page height */
+	--pageHeight: 100rem;
 }
-
+body {
+	height: var(--pageHeight);
+}
 .dark-theme {
-	background-color: var(--darkBlue);
+	background: var(--darkBlue);
 	--cardColor: var(--lightBlue);
 	--titleColor: var(--white);
 }
 
 .light-theme {
-	background-color: var(--grey);
+	background: var(--grey);
 	--cardColor: var(--white);
 	--titleColor: var(--black);
 }
@@ -84,4 +88,30 @@ header a {
 	padding: 2px;
 	border-radius: 0.25rem;
 	box-shadow: var(--level-1);
+}
+
+.details-page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.job-details-card {
+	align-items: center;
+	width: 50%;
+	background-color: var(--cardColor);
+	padding: 0 2rem 2rem 2rem;
+	margin: 2rem;
+	border-radius: 5px;
+	text-decoration: none;
+	box-shadow: var(--level-1);
+	color: var(--darkGrey);
+}
+
+.job-details-title {
+	color: var(--titleColor);
+}
+
+.nav {
+	user-select: none;
 }
