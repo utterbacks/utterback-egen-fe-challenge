@@ -8,11 +8,17 @@ function App() {
 	return (
 		<Router>
 			<Switch>
-				<Layout>
-					<Route exact path="/" component={JobsList} />
+				<Route exact path="/">
+					<Layout>
+						<JobsList />
+					</Layout>
+				</Route>
 
-					<Route path="/job/:id" component={JobDetails} />
-				</Layout>
+				<Route path="/job/:id">
+					<Layout>
+						<JobDetails />
+					</Layout>
+				</Route>
 			</Switch>
 		</Router>
 	);

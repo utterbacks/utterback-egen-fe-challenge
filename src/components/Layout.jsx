@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Layout({ children }) {
 	function useToggle(initialValue = true) {
@@ -13,9 +14,9 @@ function Layout({ children }) {
 	return (
 		<div className={isOn ? "light-theme" : "dark-theme"}>
 			<header className="nav">
-				<a href="/">
+				<Link to="/">
 					<div>devjobs</div>
-				</a>
+				</Link>
 				<div>
 					<i class="far fa-moon"></i>{" "}
 					{isOn ? (

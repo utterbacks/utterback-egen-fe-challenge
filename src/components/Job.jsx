@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ReactTimeAgo from "react-time-ago";
 
 function Job({ job }) {
 	return (
-		<a href={`/job/${job.id}`} className="job-card">
+		<Link to={`/job/${job.id}`} className="job-card">
 			{job.company_logo && (
 				<img src={job.company_logo} alt="" className="thumbnail" />
 			)}
@@ -14,7 +15,7 @@ function Job({ job }) {
 				{job.company}
 				<div className="job-location">{job.location}</div>
 			</div>
-		</a>
+		</Link>
 	);
 }
 
