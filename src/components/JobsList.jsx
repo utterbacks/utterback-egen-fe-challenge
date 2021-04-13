@@ -31,7 +31,7 @@ function JobsList() {
 					RenderComponent={Job}
 					title="jobs"
 					pageLimit={5}
-					dataLimit={6}
+					dataLimit={12}
 				/>
 			</div>
 		</div>
