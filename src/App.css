@@ -106,6 +106,9 @@ header {
 	color: var(--darkGrey);
 	font-size: 100%;
 }
+.job-details-card a {
+	color: var(--purple);
+}
 
 .title-line {
 	display: flex;
@@ -145,7 +148,7 @@ header {
 	color: var(--white);
 }
 
-.apply-now {
+.job-details-card .apply-now {
 	text-decoration: none;
 	color: var(--white);
 	background-color: var(--purple);
