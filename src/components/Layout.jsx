@@ -14,8 +14,8 @@ function Layout({ children }) {
 	return (
 		<div className={isOn ? "light-theme" : "dark-theme"}>
 			<header className="nav">
-				<Link to="/">
-					<div>devjobs</div>
+				<Link to="/" className="header-link">
+					<div className="">devjobs</div>
 				</Link>
 				<div>
 					<i class="far fa-moon"></i>{" "}

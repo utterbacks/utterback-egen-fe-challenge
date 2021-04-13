@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Job from "./Job";
+import Pagination from "./Pagination";
 
 const PROXY_SERVER = "https://mysterious-plateau-89015.herokuapp.com/";
 const BASE_URL = "https://jobs.github.com/positions.json";
@@ -25,9 +26,13 @@ function JobsList() {
 	return (
 		<div>
 			<div className="job-list">
-				{jobs.map((job) => {
-					return <Job key={job.id} job={job} />;
-				})}
+				<Pagination
+					data={jobs}
+					RenderComponent={Job}
+					title="jobs"
+					pageLimit={5}
+					dataLimit={6}
+				/>
 			</div>
 		</div>
 	);
