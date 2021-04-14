@@ -28,6 +28,7 @@ header {
 	--cardColor: var(--lightBlue);
 	--titleColor: var(--white);
 	min-height: 100vh;
+	min-width: 100vw;
 }
 
 .light-theme {
@@ -35,6 +36,7 @@ header {
 	--cardColor: var(--white);
 	--titleColor: var(--black);
 	min-height: 100vh;
+	min-width: 100vw;
 }
 
 .header-link {
@@ -47,12 +49,12 @@ header {
 	background-color: var(--cardColor);
 	padding: 0 2rem 2rem 2rem;
 	margin: 2rem;
-
 	border-radius: 5px;
 	text-decoration: none;
 	box-shadow: var(--level-1);
-	width: 15rem;
-	min-height: 15rem;
+	height: 12rem;
+	width: 60vw;
+	max-width: 166px;
 }
 
 .job-card-title {
@@ -73,7 +75,6 @@ header {
 	flex-wrap: wrap;
 	padding-bottom: 6rem;
 	margin: none;
-	min-width: 100vh;
 }
 
 .job-location {
