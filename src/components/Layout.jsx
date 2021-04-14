@@ -13,7 +13,7 @@ function Layout({ children }) {
 
 	return (
 		<div className={isOn ? "light-theme" : "dark-theme"}>
-			<header className="nav">
+			<header>
 				<Link to="/" className="header-link">
 					<div className="">devjobs</div>
 				</Link>

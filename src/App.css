@@ -12,17 +12,29 @@
 	--level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
+/* navbar
+------------------------------------------------------
+------------------------------------------------------ */
+
 header {
 	background-color: var(--purple);
 	color: var(--white);
 	display: flex;
 	justify-content: space-between;
 	font-size: 1.5rem;
-
+	user-select: none;
 	padding: 2% 10% 2% 10%;
 	border-radius: 0px 0px 0px 50px;
 }
+.header-link {
+	font-weight: 700;
+	text-decoration: none;
+	color: var(--white);
+}
 
+/* theme settings
+------------------------------------------------------
+------------------------------------------------------ */
 .dark-theme {
 	background-color: var(--darkBlue);
 	--cardColor: var(--lightBlue);
@@ -39,10 +51,17 @@ header {
 	min-width: 100vw;
 }
 
-.header-link {
-	font-weight: 700;
-	text-decoration: none;
-	color: var(--white);
+/* landing page, jobs list
+------------------------------------------------------
+------------------------------------------------------ */
+
+.job-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-bottom: 6rem;
+	margin: none;
 }
 
 .job-card {
@@ -68,15 +87,6 @@ header {
 	font-size: 75%;
 }
 
-.job-list {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	padding-bottom: 6rem;
-	margin: none;
-}
-
 .job-location {
 	color: var(--purple);
 	padding: 0.5rem 0 0.5rem 0;
@@ -93,6 +103,11 @@ header {
 	box-shadow: var(--level-1);
 }
 
+/* job details page
+------------------------------------------------------
+------------------------------------------------------ */
+
+/* main page styles */
 .details-page {
 	display: flex;
 	justify-content: center;
@@ -100,7 +115,7 @@ header {
 	flex-direction: column;
 	padding-bottom: 5rem;
 }
-
+/* main body card styles */
 .job-details-card {
 	width: 50%;
 	background-color: var(--cardColor);
@@ -115,12 +130,25 @@ header {
 .job-details-card a {
 	color: var(--purple);
 }
+.job-details-card .apply-now {
+	text-decoration: none;
+	color: var(--white);
+	background-color: var(--purple);
+	padding: 0.6rem;
+	border-radius: 7px;
+	font-size: 0.7rem;
+}
 
 .title-line {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
+.job-details-title {
+	color: var(--titleColor);
+	width: 20rem;
+}
+/* header card styles */
 .company-header-card {
 	display: flex;
 	justify-content: space-between;
@@ -140,7 +168,17 @@ header {
 	max-height: 10%;
 	object-fit: contain;
 }
-
+.company-site {
+	text-decoration: none;
+	text-align: center;
+	color: var(--purple);
+	background-color: var(--grey);
+	padding: 0.6rem;
+	width: 7rem;
+	border-radius: 7px;
+	font-size: 0.7rem;
+}
+/* apply card at bottom of page */
 .apply-card {
 	width: 50%;
 	background-color: var(--purple);
@@ -154,33 +192,9 @@ header {
 	color: var(--white);
 }
 
-.job-details-card .apply-now {
-	text-decoration: none;
-	color: var(--white);
-	background-color: var(--purple);
-	padding: 0.6rem;
-	border-radius: 7px;
-	font-size: 0.7rem;
-}
-
-.company-site {
-	text-decoration: none;
-	text-align: center;
-	color: var(--purple);
-	background-color: var(--grey);
-	padding: 0.6rem;
-	width: 7rem;
-	border-radius: 7px;
-	font-size: 0.7rem;
-}
-.job-details-title {
-	color: var(--titleColor);
-	width: 20rem;
-}
-
-.nav {
-	user-select: none;
-}
+/* pagination styles https://academind.com/tutorials/reactjs-pagination/
+------------------------------------------------------
+------------------------------------------------------ */
 
 .pagination {
 	display: flex;
@@ -231,7 +245,12 @@ header {
 	color: #999;
 }
 
-/* loading animation */
+/* loading animation styles from https://loading.io/css/
+------------------------------------------------------
+------------------------------------------------------ */
+.job-list .loading {
+	margin: 0 45vw 0 45vw;
+}
 
 .lds-ellipsis {
 	position: relative;

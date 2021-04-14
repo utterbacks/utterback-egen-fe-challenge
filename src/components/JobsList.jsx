@@ -25,24 +25,27 @@ function JobsList() {
 		getJobs();
 		// eslint-disable-next-line
 	}, []);
-
+	const maxPages = Math.floor(jobs.length / 12 + 1);
 	return (
 		<div>
 			<div className="job-list">
-				{isLoading && (
-					<div class="lds-ellipsis">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				)}
+				<div className="loading">
+					{isLoading && (
+						<div class="lds-ellipsis">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					)}
+				</div>
 				<Pagination
 					data={jobs}
 					RenderComponent={Job}
 					title="jobs"
 					pageLimit={5}
 					dataLimit={12}
+					maxPages={maxPages}
 				/>
 			</div>
 		</div>
