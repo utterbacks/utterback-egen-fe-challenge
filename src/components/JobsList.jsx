@@ -8,12 +8,14 @@ console.log(PROXY_SERVER + BASE_URL);
 
 function JobsList() {
 	const [jobs, setJobs] = useState([]);
+	const [isLoading, setLoading] = useState(true);
 
 	const getJobs = async () => {
 		try {
 			const res = await fetch(PROXY_SERVER + BASE_URL);
 			const jobs = await res.json();
 			setJobs(jobs);
+			setLoading(!isLoading);
 		} catch (e) {
 			console.log(e);
 		}
@@ -26,6 +28,14 @@ function JobsList() {
 	return (
 		<div>
 			<div className="job-list">
+				{isLoading && (
+					<div class="lds-ellipsis">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				)}
 				<Pagination
 					data={jobs}
 					RenderComponent={Job}

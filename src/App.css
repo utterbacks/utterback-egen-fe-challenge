@@ -27,12 +27,14 @@ header {
 	background-color: var(--darkBlue);
 	--cardColor: var(--lightBlue);
 	--titleColor: var(--white);
+	min-height: 100vh;
 }
 
 .light-theme {
 	background-color: var(--grey);
 	--cardColor: var(--white);
 	--titleColor: var(--black);
+	min-height: 100vh;
 }
 
 .header-link {
@@ -45,10 +47,12 @@ header {
 	background-color: var(--cardColor);
 	padding: 0 2rem 2rem 2rem;
 	margin: 2rem;
+
 	border-radius: 5px;
 	text-decoration: none;
 	box-shadow: var(--level-1);
 	width: 15rem;
+	min-height: 15rem;
 }
 
 .job-card-title {
@@ -67,8 +71,9 @@ header {
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	padding-bottom: 12rem;
+	padding-bottom: 6rem;
 	margin: none;
+	min-width: 100vh;
 }
 
 .job-location {
@@ -187,8 +192,8 @@ header {
 	border: 2px solid #666;
 	padding: 10px 15px;
 	border-radius: 50%;
-	height: 45px;
-	width: 45px;
+	height: 1em;
+	width: 1em;
 	position: relative;
 	margin: 0 5px;
 	cursor: pointer;
@@ -223,4 +228,62 @@ header {
 	pointer-events: none;
 	box-shadow: none;
 	color: #999;
+}
+
+/* loading animation */
+
+.lds-ellipsis {
+	position: relative;
+	justify-content: center;
+	width: 80px;
+	height: 80px;
+}
+.lds-ellipsis div {
+	position: absolute;
+	top: 33px;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background: var(--purple);
+	animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+	left: 8px;
+	animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+	left: 8px;
+	animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+	left: 32px;
+	animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+	left: 56px;
+	animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+@keyframes lds-ellipsis3 {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+@keyframes lds-ellipsis2 {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(24px, 0);
+	}
 }
