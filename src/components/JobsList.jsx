@@ -23,6 +23,7 @@ function JobsList() {
 
 	useEffect(() => {
 		getJobs();
+		// eslint-disable-next-line
 	}, []);
 
 	return (
