@@ -71,9 +71,9 @@ header {
 	border-radius: 5px;
 	text-decoration: none;
 	box-shadow: var(--level-1);
-	height: 12rem;
+	height: 15rem;
 	width: 60vw;
-	max-width: 166px;
+	max-width: 200px;
 }
 
 .job-card-title {
